@@ -118,6 +118,7 @@ export async function createGitHubDeploymentAndJobSummary(
 			]);
 
 		if (createGitHubDeploymentRes.status === "rejected") {
+			info(config, JSON.stringify(createGitHubDeploymentRes));
 			warn(config, "Creating Github Deployment failed");
 		}
 
